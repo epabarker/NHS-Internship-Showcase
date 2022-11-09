@@ -1,0 +1,5618 @@
+{
+  "version": "0.1.1-beta.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": -321.8419998433953,
+          "y": -175.55398101125223
+        },
+        "caption": "Patient"
+      },
+      {
+        "id": "n1",
+        "position": {
+          "x": -618.3012811127555,
+          "y": 79.49523262983553
+        },
+        "caption": "Admission"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": -69,
+          "y": -192
+        },
+        "caption": "Transfer"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": -369,
+          "y": 408
+        },
+        "caption": "Diagnosis_ICD"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": -204.57718970840256,
+          "y": 430.8248464717189
+        },
+        "caption": "DRG_code"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 231,
+          "y": -192
+        },
+        "caption": "EMAR"
+      },
+      {
+        "id": "n6",
+        "position": {
+          "x": 531,
+          "y": -192
+        },
+        "caption": "Lab Event"
+      },
+      {
+        "id": "n7",
+        "position": {
+          "x": 531,
+          "y": 46.6237291532834
+        },
+        "caption": "d_labitems"
+      },
+      {
+        "id": "n8",
+        "position": {
+          "x": -369,
+          "y": 730.824846471719
+        },
+        "caption": "d_ICD_diagnoses"
+      },
+      {
+        "id": "n9",
+        "position": {
+          "x": 382.57541899441367,
+          "y": -431.5977653631286
+        },
+        "caption": "Pharmacy"
+      },
+      {
+        "id": "n10",
+        "position": {
+          "x": 184.30726256983252,
+          "y": 152.98324022346358
+        },
+        "caption": "Prescription"
+      },
+      {
+        "id": "n11",
+        "position": {
+          "x": 487.6783414175223,
+          "y": 286.2429826121802
+        },
+        "caption": "POE"
+      },
+      {
+        "id": "n13",
+        "position": {
+          "x": -618.3012811127555,
+          "y": 1030.824846471719
+        },
+        "caption": "Procedure"
+      },
+      {
+        "id": "n14",
+        "position": {
+          "x": -321.8419998433953,
+          "y": 1096.6229889477345
+        },
+        "caption": "d_ICD_Procedure"
+      },
+      {
+        "id": "n15",
+        "position": {
+          "x": 831,
+          "y": -431.5977653631286
+        },
+        "caption": "Microbiology"
+      },
+      {
+        "id": "n16",
+        "position": {
+          "x": 508.72963547458414,
+          "y": 481.93263443979316
+        },
+        "caption": "POE_Detail"
+      },
+      {
+        "id": "n17",
+        "position": {
+          "x": 1131,
+          "y": -431.5977653631286
+        },
+        "caption": "Service"
+      },
+      {
+        "id": "n18",
+        "position": {
+          "x": -580.6767436582454,
+          "y": -1105.962576156143
+        },
+        "caption": "Chart Event"
+      },
+      {
+        "id": "n19",
+        "position": {
+          "x": -25.38271857403504,
+          "y": -602.7406644910716
+        },
+        "caption": "ICU Stay"
+      },
+      {
+        "id": "n20",
+        "position": {
+          "x": -369,
+          "y": -1105.962576156143
+        },
+        "caption": "Datetime Event"
+      },
+      {
+        "id": "n21",
+        "position": {
+          "x": -580.6767436582454,
+          "y": -805.9625761561431
+        },
+        "caption": "Input Event"
+      },
+      {
+        "id": "n22",
+        "position": {
+          "x": -31.37546254548988,
+          "y": -953.9781227226981
+        },
+        "caption": "Output Event"
+      },
+      {
+        "id": "n23",
+        "position": {
+          "x": -321.8419998433953,
+          "y": -777.1880594103578
+        },
+        "caption": "Procedure Event"
+      },
+      {
+        "id": "n24",
+        "position": {
+          "x": 123.85403682328686,
+          "y": -1288.9346465229742
+        },
+        "caption": "d_ITEMS"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n0",
+        "type": "HAS_ADMISSION",
+        "fromId": "n0",
+        "toId": "n1"
+      },
+      {
+        "id": "n1",
+        "type": "HAS_TRANSFER",
+        "fromId": "n1",
+        "toId": "n2"
+      },
+      {
+        "id": "n2",
+        "type": "HAS_DETAIL",
+        "fromId": "n6",
+        "toId": "n7"
+      },
+      {
+        "id": "n3",
+        "type": "HAS_DIAGNOSIS_INFO",
+        "fromId": "n3",
+        "toId": "n8"
+      },
+      {
+        "id": "n4",
+        "type": "HAS_MEDICINE",
+        "fromId": "n1",
+        "toId": "n5"
+      },
+      {
+        "id": "n5",
+        "type": "HAS_PHARMACY_INFO",
+        "fromId": "n5",
+        "toId": "n9"
+      },
+      {
+        "id": "n6",
+        "type": "HAS_PRESCRIPTION",
+        "fromId": "n1",
+        "toId": "n10"
+      },
+      {
+        "id": "n7",
+        "type": "HAS_PRESCRIPTION",
+        "fromId": "n0",
+        "toId": "n10"
+      },
+      {
+        "id": "n8",
+        "type": "HAS_MEDICINE",
+        "fromId": "n0",
+        "toId": "n5"
+      },
+      {
+        "id": "n9",
+        "type": "HAS_POE",
+        "fromId": "n5",
+        "toId": "n11"
+      },
+      {
+        "id": "n10",
+        "type": "HAS_LAB_EVENT",
+        "fromId": "n1",
+        "toId": "n6"
+      },
+      {
+        "id": "n11",
+        "type": "HAS_LAB_EVENT",
+        "fromId": "n0",
+        "toId": "n6"
+      },
+      {
+        "id": "n12",
+        "type": "HAS_DRG_CODE",
+        "fromId": "n1",
+        "toId": "n4"
+      },
+      {
+        "id": "n13",
+        "type": "HAS_DRG_CODE",
+        "fromId": "n0",
+        "toId": "n4"
+      },
+      {
+        "id": "n14",
+        "type": "HAS_DIAGNOSIS",
+        "fromId": "n1",
+        "toId": "n3"
+      },
+      {
+        "id": "n15",
+        "type": "HAS_DIAGNOSIS",
+        "fromId": "n0",
+        "toId": "n3"
+      },
+      {
+        "id": "n16",
+        "type": "HAS_PHARMACY_INFO",
+        "fromId": "n0",
+        "toId": "n9"
+      },
+      {
+        "id": "n17",
+        "type": "HAS_PHARMACY_INFO",
+        "fromId": "n1",
+        "toId": "n9"
+      },
+      {
+        "id": "n18",
+        "type": "HAS_PHARMACY_INFO",
+        "fromId": "n11",
+        "toId": "n9"
+      },
+      {
+        "id": "n19",
+        "type": "HAS_POE",
+        "fromId": "n0",
+        "toId": "n11"
+      },
+      {
+        "id": "n20",
+        "type": "HAS_POE",
+        "fromId": "n1",
+        "toId": "n11"
+      },
+      {
+        "id": "n21",
+        "type": "HAS_PROCEDURE_INFO",
+        "fromId": "n13",
+        "toId": "n14"
+      },
+      {
+        "id": "n22",
+        "type": "HAS_PROCEDURE",
+        "fromId": "n1",
+        "toId": "n13"
+      },
+      {
+        "id": "n23",
+        "type": "HAS_PROCEDURE",
+        "fromId": "n0",
+        "toId": "n13"
+      },
+      {
+        "id": "n24",
+        "type": "HAS_TRANSFER",
+        "fromId": "n0",
+        "toId": "n2"
+      },
+      {
+        "id": "n25",
+        "type": "HAS_MICROBIOLOGY",
+        "fromId": "n0",
+        "toId": "n15"
+      },
+      {
+        "id": "n26",
+        "type": "HAS_MICROBIOLOGY",
+        "fromId": "n1",
+        "toId": "n15"
+      },
+      {
+        "id": "n27",
+        "type": "HAS_POE_DETAIL",
+        "fromId": "n11",
+        "toId": "n16"
+      },
+      {
+        "id": "n28",
+        "type": "HAS_POE_DETAIL",
+        "fromId": "n0",
+        "toId": "n16"
+      },
+      {
+        "id": "n29",
+        "type": "UNDER_CARE_OF",
+        "fromId": "n0",
+        "toId": "n17"
+      },
+      {
+        "id": "n30",
+        "type": "UNDER_CARE_OF",
+        "fromId": "n1",
+        "toId": "n17"
+      },
+      {
+        "id": "n31",
+        "type": "HAS_ICU_STAY",
+        "fromId": "n0",
+        "toId": "n19"
+      },
+      {
+        "id": "n32",
+        "type": "HAS_ICU_STAY",
+        "fromId": "n1",
+        "toId": "n19"
+      },
+      {
+        "id": "n33",
+        "type": "HAS_INPUT_EVENT",
+        "fromId": "n1",
+        "toId": "n21"
+      },
+      {
+        "id": "n34",
+        "type": "HAS_INPUT_EVENT",
+        "fromId": "n19",
+        "toId": "n21"
+      },
+      {
+        "id": "n35",
+        "type": "HAS_INPUT_EVENT",
+        "fromId": "n0",
+        "toId": "n21"
+      },
+      {
+        "id": "n36",
+        "type": "HAS_PROCEDURE_EVENT",
+        "fromId": "n1",
+        "toId": "n23"
+      },
+      {
+        "id": "n37",
+        "type": "HAS_PROCEDURE_EVENT",
+        "fromId": "n0",
+        "toId": "n23"
+      },
+      {
+        "id": "n38",
+        "type": "HAS_PROCEDURE_EVENT",
+        "fromId": "n19",
+        "toId": "n23"
+      },
+      {
+        "id": "n39",
+        "type": "HAS_OUTPUT_EVENT",
+        "fromId": "n0",
+        "toId": "n22"
+      },
+      {
+        "id": "n40",
+        "type": "HAS_OUTPUT_EVENT",
+        "fromId": "n19",
+        "toId": "n22"
+      },
+      {
+        "id": "n41",
+        "type": "HAS_OUTPUT_EVENT",
+        "fromId": "n1",
+        "toId": "n22"
+      },
+      {
+        "id": "n42",
+        "type": "HAS_DATETIME_EVENT",
+        "fromId": "n1",
+        "toId": "n20"
+      },
+      {
+        "id": "n43",
+        "type": "HAS_DATETIME_EVENT",
+        "fromId": "n0",
+        "toId": "n20"
+      },
+      {
+        "id": "n44",
+        "type": "HAS_DATETIME_EVENT",
+        "fromId": "n19",
+        "toId": "n20"
+      },
+      {
+        "id": "n45",
+        "type": "HAS_CHART_EVENT",
+        "fromId": "n1",
+        "toId": "n18"
+      },
+      {
+        "id": "n46",
+        "type": "HAS_CHART_EVENT",
+        "fromId": "n0",
+        "toId": "n18"
+      },
+      {
+        "id": "n47",
+        "type": "HAS_CHART_EVENT",
+        "fromId": "n19",
+        "toId": "n18"
+      },
+      {
+        "id": "n48",
+        "type": "HAS_ITEM",
+        "fromId": "n18",
+        "toId": "n24"
+      },
+      {
+        "id": "n49",
+        "type": "HAS_ITEM",
+        "fromId": "n20",
+        "toId": "n24"
+      },
+      {
+        "id": "n50",
+        "type": "HAS_ITEM",
+        "fromId": "n22",
+        "toId": "n24"
+      },
+      {
+        "id": "n51",
+        "type": "HAS_ITEM",
+        "fromId": "n23",
+        "toId": "n24"
+      },
+      {
+        "id": "n52",
+        "type": "HAS_ITEM",
+        "fromId": "n21",
+        "toId": "n24"
+      }
+    ]
+  },
+  "dataModel": {
+    "fileModel": {
+      "fileSchemas": {
+        "postgres_subset_hosp_d_icd_diagnoses.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "icd_code",
+              "type": "string",
+              "sample": "0010   ",
+              "include": true
+            },
+            {
+              "name": "icd_version",
+              "type": "string",
+              "sample": "9",
+              "include": true
+            },
+            {
+              "name": "long_title",
+              "type": "string",
+              "sample": "Cholera due to vibrio cholerae",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_d_icd_procedures.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "icd_code",
+              "type": "string",
+              "sample": "0001   ",
+              "include": true
+            },
+            {
+              "name": "icd_version",
+              "type": "string",
+              "sample": "9",
+              "include": true
+            },
+            {
+              "name": "long_title",
+              "type": "string",
+              "sample": "Therapeutic ultrasound of vessels of head and neck",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_d_labitems.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "51905",
+              "include": true
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "sample": " ",
+              "include": true
+            },
+            {
+              "name": "fluid",
+              "type": "string",
+              "sample": "Other Body Fluid",
+              "include": true
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "sample": "Chemistry",
+              "include": true
+            },
+            {
+              "name": "loinc_code",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_diagnoses_icd.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "17694488",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "26994180",
+              "include": true
+            },
+            {
+              "name": "seq_num",
+              "type": "string",
+              "sample": "14",
+              "include": true
+            },
+            {
+              "name": "icd_code",
+              "type": "string",
+              "sample": "E8700  ",
+              "include": true
+            },
+            {
+              "name": "icd_version",
+              "type": "string",
+              "sample": "9",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_drgcodes.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "17694488",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "26994180",
+              "include": true
+            },
+            {
+              "name": "drg_type",
+              "type": "string",
+              "sample": "APR",
+              "include": true
+            },
+            {
+              "name": "drg_code",
+              "type": "string",
+              "sample": "169",
+              "include": true
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "sample": "MAJOR ABDOMINAL VASCULAR PROCEDURES",
+              "include": true
+            },
+            {
+              "name": "drg_severity",
+              "type": "string",
+              "sample": "4",
+              "include": true
+            },
+            {
+              "name": "drg_mortality",
+              "type": "string",
+              "sample": "4",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_emar.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "14944358",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "22382530",
+              "include": true
+            },
+            {
+              "name": "emar_id",
+              "type": "string",
+              "sample": "14944358-125",
+              "include": true
+            },
+            {
+              "name": "emar_seq",
+              "type": "string",
+              "sample": "125",
+              "include": true
+            },
+            {
+              "name": "poe_id",
+              "type": "string",
+              "sample": "14944358-186",
+              "include": true
+            },
+            {
+              "name": "pharmacy_id",
+              "type": "string",
+              "sample": "1076198",
+              "include": true
+            },
+            {
+              "name": "charttime",
+              "type": "string",
+              "sample": "2156-11-26 04:10:00.000000",
+              "include": true
+            },
+            {
+              "name": "medication",
+              "type": "string",
+              "sample": "HYDROmorphone (Dilaudid)",
+              "include": true
+            },
+            {
+              "name": "event_txt",
+              "type": "string",
+              "sample": "Administered",
+              "include": true
+            },
+            {
+              "name": "scheduletime",
+              "type": "string",
+              "sample": "2156-11-26 04:09:00.000000",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2156-11-26 04:11:00.000000",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_labevents.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "labevent_id",
+              "type": "string",
+              "sample": "4293998",
+              "include": true
+            },
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "10350119",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "22478414",
+              "include": true
+            },
+            {
+              "name": "specimen_id",
+              "type": "string",
+              "sample": "30581291",
+              "include": true
+            },
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "50802",
+              "include": true
+            },
+            {
+              "name": "charttime",
+              "type": "string",
+              "sample": "2140-12-17 11:11:00",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2140-12-17 11:14:00",
+              "include": true
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "sample": "11",
+              "include": true
+            },
+            {
+              "name": "valuenum",
+              "type": "string",
+              "sample": "11",
+              "include": true
+            },
+            {
+              "name": "valueuom",
+              "type": "string",
+              "sample": "mEq/L",
+              "include": true
+            },
+            {
+              "name": "ref_range_lower",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "ref_range_upper",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "flag",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "priority",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "comments",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_microbiologyevents.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "microevent_id",
+              "type": "string",
+              "sample": "121505",
+              "include": true
+            },
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "10350119",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "22478414",
+              "include": true
+            },
+            {
+              "name": "micro_specimen_id",
+              "type": "string",
+              "sample": "256370",
+              "include": true
+            },
+            {
+              "name": "chartdate",
+              "type": "string",
+              "sample": "2140-12-13 00:00:00",
+              "include": true
+            },
+            {
+              "name": "charttime",
+              "type": "string",
+              "sample": "2140-12-13 22:39:00",
+              "include": true
+            },
+            {
+              "name": "spec_itemid",
+              "type": "string",
+              "sample": "70021",
+              "include": true
+            },
+            {
+              "name": "spec_type_desc",
+              "type": "string",
+              "sample": "BRONCHOALVEOLAR LAVAGE",
+              "include": true
+            },
+            {
+              "name": "test_seq",
+              "type": "string",
+              "sample": "6",
+              "include": true
+            },
+            {
+              "name": "storedate",
+              "type": "string",
+              "sample": "2140-12-30 00:00:00",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2140-12-30 11:35:00",
+              "include": true
+            },
+            {
+              "name": "test_itemid",
+              "type": "string",
+              "sample": "90269",
+              "include": true
+            },
+            {
+              "name": "test_name",
+              "type": "string",
+              "sample": "FUNGAL CULTURE",
+              "include": true
+            },
+            {
+              "name": "org_itemid",
+              "type": "string",
+              "sample": "90494",
+              "include": true
+            },
+            {
+              "name": "org_name",
+              "type": "string",
+              "sample": "ASPERGILLUS TERREUS",
+              "include": true
+            },
+            {
+              "name": "isolate_num",
+              "type": "string",
+              "sample": "3",
+              "include": true
+            },
+            {
+              "name": "quantity",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "ab_itemid",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "ab_name",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "dilution_text",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "dilution_comparison",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "dilution_value",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "interpretation",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "comments",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_pharmacy.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "14385670",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "29599864",
+              "include": true
+            },
+            {
+              "name": "pharmacy_id",
+              "type": "string",
+              "sample": "64048094",
+              "include": true
+            },
+            {
+              "name": "poe_id",
+              "type": "string",
+              "sample": "14385670-220",
+              "include": true
+            },
+            {
+              "name": "starttime",
+              "type": "string",
+              "sample": "2166-06-18 15:00:00.000",
+              "include": true
+            },
+            {
+              "name": "stoptime",
+              "type": "string",
+              "sample": "2166-06-23 19:00:00.000",
+              "include": true
+            },
+            {
+              "name": "medication",
+              "type": "string",
+              "sample": "Potassium Chloride Replacement (Critical Care and Oncology) ",
+              "include": true
+            },
+            {
+              "name": "proc_type",
+              "type": "string",
+              "sample": "Unit Dose",
+              "include": true
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "sample": "Discontinued",
+              "include": true
+            },
+            {
+              "name": "entertime",
+              "type": "string",
+              "sample": "2166-06-18 14:29:52.000",
+              "include": true
+            },
+            {
+              "name": "verifiedtime",
+              "type": "string",
+              "sample": "2166-06-18 14:29:52.000",
+              "include": true
+            },
+            {
+              "name": "route",
+              "type": "string",
+              "sample": "PO",
+              "include": true
+            },
+            {
+              "name": "frequency",
+              "type": "string",
+              "sample": "PRN",
+              "include": true
+            },
+            {
+              "name": "disp_sched",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "infusion_type",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "sliding_scale",
+              "type": "string",
+              "sample": "Y",
+              "include": true
+            },
+            {
+              "name": "lockout_interval",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "basal_rate",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "one_hr_max",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "doses_per_24_hrs",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "duration",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "duration_interval",
+              "type": "string",
+              "sample": "Ongoing",
+              "include": true
+            },
+            {
+              "name": "expiration_value",
+              "type": "string",
+              "sample": "365",
+              "include": true
+            },
+            {
+              "name": "expiration_unit",
+              "type": "string",
+              "sample": "Days",
+              "include": true
+            },
+            {
+              "name": "expirationdate",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "dispensation",
+              "type": "string",
+              "sample": "Omnicell",
+              "include": true
+            },
+            {
+              "name": "fill_quantity",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_poe.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "poe_id",
+              "type": "string",
+              "sample": "10760601-184",
+              "include": true
+            },
+            {
+              "name": "poe_seq",
+              "type": "string",
+              "sample": "184",
+              "include": true
+            },
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "10760601",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "27040471",
+              "include": true
+            },
+            {
+              "name": "ordertime",
+              "type": "string",
+              "sample": "2176-07-13 11:59:31",
+              "include": true
+            },
+            {
+              "name": "order_type",
+              "type": "string",
+              "sample": "Cardiology",
+              "include": true
+            },
+            {
+              "name": "order_subtype",
+              "type": "string",
+              "sample": "ECG",
+              "include": true
+            },
+            {
+              "name": "transaction_type",
+              "type": "string",
+              "sample": "New",
+              "include": true
+            },
+            {
+              "name": "discontinue_of_poe_id",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "discontinued_by_poe_id",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "order_status",
+              "type": "string",
+              "sample": "Inactive",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_poe_detail.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "poe_id",
+              "type": "string",
+              "sample": "17399295-5187",
+              "include": true
+            },
+            {
+              "name": "poe_seq",
+              "type": "string",
+              "sample": "5187",
+              "include": true
+            },
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "17399295",
+              "include": true
+            },
+            {
+              "name": "field_name",
+              "type": "string",
+              "sample": "Admit category",
+              "include": true
+            },
+            {
+              "name": "field_value",
+              "type": "string",
+              "sample": "Admit to inpatient",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_prescriptions.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "14385670",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "29599864",
+              "include": true
+            },
+            {
+              "name": "pharmacy_id",
+              "type": "string",
+              "sample": "69407095",
+              "include": true
+            },
+            {
+              "name": "starttime",
+              "type": "string",
+              "sample": "2166-06-13 23:00:00.000",
+              "include": true
+            },
+            {
+              "name": "stoptime",
+              "type": "string",
+              "sample": "2166-06-17 09:00:00.000",
+              "include": true
+            },
+            {
+              "name": "drug_type",
+              "type": "string",
+              "sample": "BASE",
+              "include": true
+            },
+            {
+              "name": "drug",
+              "type": "string",
+              "sample": "0.9% Sodium Chloride",
+              "include": true
+            },
+            {
+              "name": "gsn",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "ndc",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "prod_strength",
+              "type": "string",
+              "sample": "100 mL Bag",
+              "include": true
+            },
+            {
+              "name": "form_rx",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "dose_val_rx",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "dose_unit_rx",
+              "type": "string",
+              "sample": "BAG",
+              "include": true
+            },
+            {
+              "name": "form_val_disp",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "form_unit_disp",
+              "type": "string",
+              "sample": "BAG",
+              "include": true
+            },
+            {
+              "name": "doses_per_24_hrs",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "route",
+              "type": "string",
+              "sample": "IV",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_procedures_icd.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "19428477",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "29969437",
+              "include": true
+            },
+            {
+              "name": "seq_num",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "chartdate",
+              "type": "string",
+              "sample": "2143-08-13 00:00:00",
+              "include": true
+            },
+            {
+              "name": "icd_code",
+              "type": "string",
+              "sample": "3612",
+              "include": true
+            },
+            {
+              "name": "icd_version",
+              "type": "string",
+              "sample": "9",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_hosp_services.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "17310066",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "21690738",
+              "include": true
+            },
+            {
+              "name": "transfertime",
+              "type": "string",
+              "sample": "2141-07-08 00:22:18.000000",
+              "include": true
+            },
+            {
+              "name": "prev_service",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "curr_service",
+              "type": "string",
+              "sample": "MED",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_icu_chartevents.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "16135826",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "23306881",
+              "include": true
+            },
+            {
+              "name": "stay_id",
+              "type": "string",
+              "sample": "30395739",
+              "include": true
+            },
+            {
+              "name": "charttime",
+              "type": "string",
+              "sample": "2152-10-13 01:24:00.000000",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2152-10-13 01:28:00.000000",
+              "include": true
+            },
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "228973",
+              "include": true
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "sample": "Identify delirium as soon as clinically evident",
+              "include": true
+            },
+            {
+              "name": "valuenum",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "valueuom",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "warning",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_icu_d_items.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "220003",
+              "include": true
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "sample": "ICU Admission date",
+              "include": true
+            },
+            {
+              "name": "abbreviation",
+              "type": "string",
+              "sample": "ICU Admission date",
+              "include": true
+            },
+            {
+              "name": "linksto",
+              "type": "string",
+              "sample": "datetimeevents",
+              "include": true
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "sample": "ADT",
+              "include": true
+            },
+            {
+              "name": "unitname",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "param_type",
+              "type": "string",
+              "sample": "Date and time",
+              "include": true
+            },
+            {
+              "name": "lownormalvalue",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "highnormalvalue",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_icu_datetimeevents.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "10350119",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "22478414",
+              "include": true
+            },
+            {
+              "name": "stay_id",
+              "type": "string",
+              "sample": "34776044",
+              "include": true
+            },
+            {
+              "name": "charttime",
+              "type": "string",
+              "sample": "2140-12-11 20:00:00.000000",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2140-12-11 22:33:00.000000",
+              "include": true
+            },
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "225754",
+              "include": true
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "sample": "2140-12-11 22:33:00.000000",
+              "include": true
+            },
+            {
+              "name": "valueuom",
+              "type": "string",
+              "sample": "Date",
+              "include": true
+            },
+            {
+              "name": "warning",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_icu_icu_stays.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "10353094",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "24688773",
+              "include": true
+            },
+            {
+              "name": "stay_id",
+              "type": "string",
+              "sample": "31382866",
+              "include": true
+            },
+            {
+              "name": "first_careunit",
+              "type": "string",
+              "sample": "Medical Intensive Care Unit (MICU)",
+              "include": true
+            },
+            {
+              "name": "last_careunit",
+              "type": "string",
+              "sample": "Medical Intensive Care Unit (MICU)",
+              "include": true
+            },
+            {
+              "name": "intime",
+              "type": "string",
+              "sample": "2188-10-13 09:09:08.000000",
+              "include": true
+            },
+            {
+              "name": "outtime",
+              "type": "string",
+              "sample": "2188-10-24 11:58:25.000000",
+              "include": true
+            },
+            {
+              "name": "los",
+              "type": "string",
+              "sample": "11.11755787037037",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_icu_inputevents.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "19428477",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "29969437",
+              "include": true
+            },
+            {
+              "name": "stay_id",
+              "type": "string",
+              "sample": "35199510",
+              "include": true
+            },
+            {
+              "name": "starttime",
+              "type": "string",
+              "sample": "2143-08-14 07:00:00.000000",
+              "include": true
+            },
+            {
+              "name": "endtime",
+              "type": "string",
+              "sample": "2143-08-14 07:01:00.000000",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2143-08-14 07:35:00.000000",
+              "include": true
+            },
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "222051",
+              "include": true
+            },
+            {
+              "name": "amount",
+              "type": "string",
+              "sample": "0.00508731272930163",
+              "include": true
+            },
+            {
+              "name": "amountuom",
+              "type": "string",
+              "sample": "mg",
+              "include": true
+            },
+            {
+              "name": "rate",
+              "type": "string",
+              "sample": "0.099947203125339",
+              "include": true
+            },
+            {
+              "name": "rateuom",
+              "type": "string",
+              "sample": "mcg/kg/min",
+              "include": true
+            },
+            {
+              "name": "orderid",
+              "type": "string",
+              "sample": "91648",
+              "include": true
+            },
+            {
+              "name": "linkorderid",
+              "type": "string",
+              "sample": "860751",
+              "include": true
+            },
+            {
+              "name": "ordercategoryname",
+              "type": "string",
+              "sample": "01-Drips",
+              "include": true
+            },
+            {
+              "name": "secondaryordercategoryname",
+              "type": "string",
+              "sample": "02-Fluids (Crystalloids)",
+              "include": true
+            },
+            {
+              "name": "ordercomponenttypedescription",
+              "type": "string",
+              "sample": "Main order parameter",
+              "include": true
+            },
+            {
+              "name": "ordercategorydescription",
+              "type": "string",
+              "sample": "Continuous Med",
+              "include": true
+            },
+            {
+              "name": "patientweight",
+              "type": "string",
+              "sample": "50.9",
+              "include": true
+            },
+            {
+              "name": "totalamount",
+              "type": "string",
+              "sample": "250",
+              "include": true
+            },
+            {
+              "name": "totalamountuom",
+              "type": "string",
+              "sample": "ml",
+              "include": true
+            },
+            {
+              "name": "isopenbag",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "continueinnextdept",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "cancelreason",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "statusdescription",
+              "type": "string",
+              "sample": "ChangeDose/Rate",
+              "include": true
+            },
+            {
+              "name": "originalamount",
+              "type": "string",
+              "sample": "24.785385131835938",
+              "include": true
+            },
+            {
+              "name": "originalrate",
+              "type": "string",
+              "sample": "0.10000000894069672",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_icu_outputevents.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "10350119",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "22478414",
+              "include": true
+            },
+            {
+              "name": "stay_id",
+              "type": "string",
+              "sample": "34776044",
+              "include": true
+            },
+            {
+              "name": "charttime",
+              "type": "string",
+              "sample": "2140-12-11 20:17:00.000",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2140-12-11 20:17:00.000",
+              "include": true
+            },
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "226559",
+              "include": true
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "sample": "100",
+              "include": true
+            },
+            {
+              "name": "valueuom",
+              "type": "string",
+              "sample": "ml",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_icu_procedureevents.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "19428477",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "29969437",
+              "include": true
+            },
+            {
+              "name": "stay_id",
+              "type": "string",
+              "sample": "35199510",
+              "include": true
+            },
+            {
+              "name": "starttime",
+              "type": "string",
+              "sample": "2143-08-13 17:10:00.000000",
+              "include": true
+            },
+            {
+              "name": "endtime",
+              "type": "string",
+              "sample": "2143-08-13 17:11:00.000000",
+              "include": true
+            },
+            {
+              "name": "storetime",
+              "type": "string",
+              "sample": "2143-08-13 17:35:00.000000",
+              "include": true
+            },
+            {
+              "name": "itemid",
+              "type": "string",
+              "sample": "225469",
+              "include": true
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "valueuom",
+              "type": "string",
+              "sample": "None",
+              "include": true
+            },
+            {
+              "name": "location",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "locationcategory",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "orderid",
+              "type": "string",
+              "sample": "1716116",
+              "include": true
+            },
+            {
+              "name": "linkorderid",
+              "type": "string",
+              "sample": "1716116",
+              "include": true
+            },
+            {
+              "name": "ordercategoryname",
+              "type": "string",
+              "sample": "Significant Events",
+              "include": true
+            },
+            {
+              "name": "secondaryordercategoryname",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "ordercategorydescription",
+              "type": "string",
+              "sample": "Task",
+              "include": true
+            },
+            {
+              "name": "patientweight",
+              "type": "string",
+              "sample": "50.9",
+              "include": true
+            },
+            {
+              "name": "totalamount",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "totalamountuom",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "isopenbag",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "continueinnextdept",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "cancelreason",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            },
+            {
+              "name": "statusdescription",
+              "type": "string",
+              "sample": "FinishedRunning",
+              "include": true
+            },
+            {
+              "name": "comments_date",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "originalamount",
+              "type": "string",
+              "sample": "1",
+              "include": true
+            },
+            {
+              "name": "originalrate",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_core_admissions.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "13993692",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "26331248",
+              "include": true
+            },
+            {
+              "name": "admittime",
+              "type": "string",
+              "sample": "2117-10-11 19:40:00.000000",
+              "include": true
+            },
+            {
+              "name": "dischtime",
+              "type": "string",
+              "sample": "2117-10-15 03:27:00.000000",
+              "include": true
+            },
+            {
+              "name": "deathtime",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "admission_type",
+              "type": "string",
+              "sample": "EW EMER.",
+              "include": true
+            },
+            {
+              "name": "admission_location",
+              "type": "string",
+              "sample": "EMERGENCY ROOM",
+              "include": true
+            },
+            {
+              "name": "discharge_location",
+              "type": "string",
+              "sample": "SKILLED NURSING FACILITY",
+              "include": true
+            },
+            {
+              "name": "insurance",
+              "type": "string",
+              "sample": "Medicare",
+              "include": true
+            },
+            {
+              "name": "language",
+              "type": "string",
+              "sample": "ENGLISH",
+              "include": true
+            },
+            {
+              "name": "marital_status",
+              "type": "string",
+              "sample": "WIDOWED",
+              "include": true
+            },
+            {
+              "name": "ethnicity",
+              "type": "string",
+              "sample": "BLACK/AFRICAN AMERICAN",
+              "include": true
+            },
+            {
+              "name": "edregtime",
+              "type": "string",
+              "sample": "2117-10-11 15:55:00.000000",
+              "include": true
+            },
+            {
+              "name": "edouttime",
+              "type": "string",
+              "sample": "2117-10-11 21:44:00.000000",
+              "include": true
+            },
+            {
+              "name": "hospital_expire_flag",
+              "type": "string",
+              "sample": "0",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_core_patients.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "14832612",
+              "include": true
+            },
+            {
+              "name": "gender",
+              "type": "string",
+              "sample": "M",
+              "include": true
+            },
+            {
+              "name": "anchor_age",
+              "type": "string",
+              "sample": "59",
+              "include": true
+            },
+            {
+              "name": "anchor_year",
+              "type": "string",
+              "sample": "2124",
+              "include": true
+            },
+            {
+              "name": "anchor_year_group",
+              "type": "string",
+              "sample": "2014 - 2016",
+              "include": true
+            },
+            {
+              "name": "dod",
+              "type": "string",
+              "sample": "",
+              "include": true
+            }
+          ]
+        },
+        "postgres_subset_core_transfers.csv": {
+          "expanded": false,
+          "fields": [
+            {
+              "name": "subject_id",
+              "type": "string",
+              "sample": "19428477",
+              "include": true
+            },
+            {
+              "name": "hadm_id",
+              "type": "string",
+              "sample": "29969437",
+              "include": true
+            },
+            {
+              "name": "transfer_id",
+              "type": "string",
+              "sample": "30405609",
+              "include": true
+            },
+            {
+              "name": "eventtype",
+              "type": "string",
+              "sample": "admit",
+              "include": true
+            },
+            {
+              "name": "careunit",
+              "type": "string",
+              "sample": "",
+              "include": true
+            },
+            {
+              "name": "intime",
+              "type": "string",
+              "sample": "2143-08-13 02:32:36.000000",
+              "include": true
+            },
+            {
+              "name": "outtime",
+              "type": "string",
+              "sample": "2143-08-13 13:14:53.000000",
+              "include": true
+            }
+          ]
+        }
+      }
+    },
+    "graphModel": {
+      "nodeSchemas": {
+        "n0": {
+          "label": "Patient",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "subject_id",
+              "type": "integer",
+              "identifier": "5395c3dc-ce60-4546-a489-68d4823002f6"
+            },
+            {
+              "property": "gender",
+              "type": "string",
+              "identifier": "89ea11f8-f0b1-4693-b060-dc0d4de8020b"
+            },
+            {
+              "property": "anchor_age",
+              "type": "integer",
+              "identifier": "219124cb-c86c-4dde-aa4a-941257690669"
+            },
+            {
+              "property": "anchor_year",
+              "type": "integer",
+              "identifier": "6047f48c-ae2b-4ac6-a04e-41ebddcbdc18"
+            },
+            {
+              "property": "anchor_year_group",
+              "type": "string",
+              "identifier": "5f4efbb7-bd7a-4873-af81-515fed054379"
+            },
+            {
+              "property": "dod",
+              "type": "string",
+              "identifier": "9d0e6717-9329-4455-8042-c827b3660870"
+            }
+          ],
+          "key": {
+            "properties": [
+              "5395c3dc-ce60-4546-a489-68d4823002f6"
+            ],
+            "name": ""
+          }
+        },
+        "n1": {
+          "label": "Admission",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "hadm_id",
+              "type": "integer",
+              "identifier": "0fc1a158-1828-44c2-9bf3-adf2f1d5f3e9"
+            },
+            {
+              "property": "admittime",
+              "type": "string",
+              "identifier": "a1107ed2-f791-438b-bb60-7eac72cb63cb"
+            },
+            {
+              "property": "dischtime",
+              "type": "string",
+              "identifier": "bec06c7a-ed2b-4813-a401-d73562a37a39"
+            },
+            {
+              "property": "deathtime",
+              "type": "string",
+              "identifier": "03c036ba-d05b-4065-8dca-72183a53b06b"
+            },
+            {
+              "property": "admission_type",
+              "type": "string",
+              "identifier": "5dc708c6-d326-4c63-ba5a-4adbfccc38c2"
+            },
+            {
+              "property": "admission_location",
+              "type": "string",
+              "identifier": "0a61a2be-2430-4a6d-8f84-2fafd1294bdf"
+            },
+            {
+              "property": "discharge_location",
+              "type": "string",
+              "identifier": "0a89cf8d-3b64-4aeb-9cad-00c14ce10bb8"
+            },
+            {
+              "property": "insurance",
+              "type": "string",
+              "identifier": "2c803986-e77c-464d-89bc-57faf8e0c877"
+            },
+            {
+              "property": "language",
+              "type": "string",
+              "identifier": "2b8f9cf7-0374-4fbf-9d4a-3012a637765b"
+            },
+            {
+              "property": "marital_status",
+              "type": "string",
+              "identifier": "ce81c30a-2a48-4e87-a51c-2fbdacc2491f"
+            },
+            {
+              "property": "ethnicity",
+              "type": "string",
+              "identifier": "da17803c-98f1-4b65-8e23-62202bc4c3f7"
+            },
+            {
+              "property": "edregtime",
+              "type": "string",
+              "identifier": "4c6cbf6d-607a-4f8d-9bdf-5e22559f213f"
+            },
+            {
+              "property": "edouttime",
+              "type": "string",
+              "identifier": "d1e75048-a15f-4c90-b1a6-ac103d81cdb2"
+            },
+            {
+              "property": "hospital_expire_flag",
+              "type": "boolean",
+              "identifier": "4c42970a-0be9-4727-98dc-2148f0c7b97e"
+            }
+          ],
+          "key": {
+            "properties": [
+              "0fc1a158-1828-44c2-9bf3-adf2f1d5f3e9"
+            ],
+            "name": ""
+          }
+        },
+        "n2": {
+          "label": "Transfer",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "transfer_id",
+              "type": "integer",
+              "identifier": "5c5e0fb6-de3d-4bbe-b753-184e1f62b56a"
+            },
+            {
+              "property": "eventtype",
+              "type": "string",
+              "identifier": "0e5d80da-9412-4c24-85ef-985059f1fa17"
+            },
+            {
+              "property": "careunit",
+              "type": "string",
+              "identifier": "facd204b-c63a-446b-bbad-03a5861779b4"
+            },
+            {
+              "property": "intime",
+              "type": "string",
+              "identifier": "8b040055-7845-4ff8-8853-4186e6af598b"
+            },
+            {
+              "property": "outtime",
+              "type": "string",
+              "identifier": "849e43f4-7bce-4302-9ded-001b0c48b356"
+            }
+          ],
+          "key": {
+            "properties": [
+              "5c5e0fb6-de3d-4bbe-b753-184e1f62b56a"
+            ],
+            "name": ""
+          }
+        },
+        "n3": {
+          "label": "Diagnosis_ICD",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "seq_num",
+              "type": "integer",
+              "identifier": "62b920f4-d105-46ec-bba1-92035a2bac37"
+            },
+            {
+              "property": "icd_code",
+              "type": "string",
+              "identifier": "83d48110-ee10-46fa-aa9b-1f7e7968983e"
+            },
+            {
+              "property": "icd_version",
+              "type": "integer",
+              "identifier": "636a1587-baa3-4c37-bad2-da66d2faf2a9"
+            }
+          ],
+          "key": {
+            "properties": [
+              "83d48110-ee10-46fa-aa9b-1f7e7968983e"
+            ],
+            "name": ""
+          }
+        },
+        "n4": {
+          "label": "DRG_code",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "drg_type",
+              "type": "string",
+              "identifier": "8e2a1717-35b7-4ccf-93c2-865a45d9d100"
+            },
+            {
+              "property": "drg_code",
+              "type": "string",
+              "identifier": "1f3bde5f-b063-4054-9e70-fd39ef275494"
+            },
+            {
+              "property": "description",
+              "type": "string",
+              "identifier": "e642b9e1-0b01-4fbe-b8be-c6a8dd521433"
+            },
+            {
+              "property": "drg_severity",
+              "type": "integer",
+              "identifier": "5187a9a5-5b26-40ef-980a-9a1f85c44681"
+            },
+            {
+              "property": "drg_mortality",
+              "type": "integer",
+              "identifier": "e3d70b78-71b8-4a57-bc84-4c481d0a4843"
+            }
+          ],
+          "key": {
+            "properties": [
+              "1f3bde5f-b063-4054-9e70-fd39ef275494"
+            ],
+            "name": ""
+          }
+        },
+        "n5": {
+          "label": "EMAR",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "emar_id",
+              "type": "integer",
+              "identifier": "6c06d750-b80d-4667-97e8-fba5cf7587f6"
+            },
+            {
+              "property": "emar_seq",
+              "type": "integer",
+              "identifier": "f75d5e18-cac2-41c1-ad36-082b7882c0ce"
+            },
+            {
+              "property": "charttime",
+              "type": "string",
+              "identifier": "22ccfe07-a580-4175-a4e4-b790226818fb"
+            },
+            {
+              "property": "medication",
+              "type": "string",
+              "identifier": "47cfed52-2ad0-44e0-854e-1d246d838be0"
+            },
+            {
+              "property": "event_txt",
+              "type": "string",
+              "identifier": "582c1f22-5692-4083-a946-748113c7b50f"
+            },
+            {
+              "property": "scheduletime",
+              "type": "string",
+              "identifier": "824fa2b2-9348-4ef2-8460-a90af12a2904"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "e38402f4-6c15-4859-bad7-5c9d52c822bb"
+            }
+          ],
+          "key": {
+            "properties": [
+              "6c06d750-b80d-4667-97e8-fba5cf7587f6"
+            ],
+            "name": ""
+          }
+        },
+        "n6": {
+          "label": "Lab Event",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "labevent_id",
+              "type": "integer",
+              "identifier": "59ec54d0-96ec-4017-8b61-567b8d9b89a9"
+            },
+            {
+              "property": "specimen_id",
+              "type": "integer",
+              "identifier": "bbe9ccc3-41cb-49e7-a1e9-3c242084477b"
+            },
+            {
+              "property": "charttime",
+              "type": "string",
+              "identifier": "c2764342-c2d9-4745-9620-7545b98890ad"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "10efb9ef-dc94-43b6-a442-f8ce502a1468"
+            },
+            {
+              "property": "value",
+              "type": "string",
+              "identifier": "7fdc731e-9756-4744-b220-1177e30a4c10"
+            },
+            {
+              "property": "valuenum",
+              "type": "float",
+              "identifier": "80ea08a6-d9cd-4029-886c-1238d321077d"
+            },
+            {
+              "property": "valueuom",
+              "type": "string",
+              "identifier": "9fe0851d-e16f-4bf5-a88f-bf9a830be7d1"
+            },
+            {
+              "property": "ref_range_lower",
+              "type": "float",
+              "identifier": "0dcd37a0-f443-4531-9817-0b2983a13677"
+            },
+            {
+              "property": "ref_range_upper",
+              "type": "float",
+              "identifier": "8baf2581-e294-492b-9450-30bd1801db87"
+            },
+            {
+              "property": "flag",
+              "type": "string",
+              "identifier": "1fae51b5-6c8a-43f0-814a-eadad7924e2b"
+            },
+            {
+              "property": "priority",
+              "type": "string",
+              "identifier": "00fcedd3-53a3-46ee-adbf-37bb879a3d21"
+            },
+            {
+              "property": "comments",
+              "type": "string",
+              "identifier": "c5fb6d58-059e-43fd-bbaf-c24af4bb3e13"
+            }
+          ],
+          "key": {
+            "properties": [
+              "59ec54d0-96ec-4017-8b61-567b8d9b89a9"
+            ],
+            "name": ""
+          }
+        },
+        "n7": {
+          "label": "d_labitems",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "itemid",
+              "type": "string",
+              "identifier": "28901e2c-7edb-4d00-a5e3-98bf8d1b7af1"
+            },
+            {
+              "property": "label",
+              "type": "string",
+              "identifier": "d17772ee-f05e-4ce4-ac11-d75d6fa1d049"
+            },
+            {
+              "property": "fluid",
+              "type": "string",
+              "identifier": "76980189-ae03-4521-80e5-5e7003ce83f7"
+            },
+            {
+              "property": "category",
+              "type": "string",
+              "identifier": "d9997ccd-97e8-4442-90bb-97e1fef18dd3"
+            },
+            {
+              "property": "loinc_code",
+              "type": "string",
+              "identifier": "809aad35-e756-441f-8b33-dd7aea75d57b"
+            }
+          ],
+          "key": {
+            "properties": [
+              "28901e2c-7edb-4d00-a5e3-98bf8d1b7af1"
+            ],
+            "name": ""
+          }
+        },
+        "n8": {
+          "label": "d_ICD_diagnoses",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "icd_code",
+              "type": "string",
+              "identifier": "0e0c90f7-b1e0-46b8-a0c9-6c5b1d08276a"
+            },
+            {
+              "property": "icd_version",
+              "type": "integer",
+              "identifier": "b7f7fd54-794d-4d31-a60c-aced833b229f"
+            },
+            {
+              "property": "long_title",
+              "type": "string",
+              "identifier": "8b467385-b118-4c6b-a2cd-40aa8d7659d4"
+            }
+          ],
+          "key": {
+            "properties": [
+              "0e0c90f7-b1e0-46b8-a0c9-6c5b1d08276a"
+            ],
+            "name": ""
+          }
+        },
+        "n9": {
+          "label": "Pharmacy",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "pharmacy_id",
+              "type": "string",
+              "identifier": "6be3237b-7aae-4a70-8ac3-94a88cc2818b"
+            },
+            {
+              "property": "starttime",
+              "type": "string",
+              "identifier": "7a2d2a44-ee16-4eeb-a2ac-93eaa00a210f"
+            },
+            {
+              "property": "stoptime",
+              "type": "string",
+              "identifier": "622440da-5397-4ccb-8189-557e18a689c2"
+            },
+            {
+              "property": "medication",
+              "type": "string",
+              "identifier": "9ef198e6-aa8b-4da3-a3e8-f210259f4574"
+            },
+            {
+              "property": "proc_type",
+              "type": "string",
+              "identifier": "5ac31c63-b8d8-4e97-a3d1-c2492114ed78"
+            },
+            {
+              "property": "status",
+              "type": "string",
+              "identifier": "af8425a6-5c0e-442a-96f6-d8d1fed48e7f"
+            },
+            {
+              "property": "entertime",
+              "type": "string",
+              "identifier": "e3a4cc7b-05da-4cd9-9dea-a6ffca5488ed"
+            },
+            {
+              "property": "verifiedtime",
+              "type": "string",
+              "identifier": "39a50502-0bf8-47b5-89f5-854ef1dfa7b6"
+            },
+            {
+              "property": "route",
+              "type": "string",
+              "identifier": "691a7bb7-60be-4adf-bae4-54e1d71ecd05"
+            },
+            {
+              "property": "frequency",
+              "type": "string",
+              "identifier": "d7ee6f84-b835-4a34-85f5-1584edb23c64"
+            },
+            {
+              "property": "disp_sched",
+              "type": "string",
+              "identifier": "e36aff4f-09ed-4a0c-bb80-1bc1e43a1710"
+            },
+            {
+              "property": "infusion_type",
+              "type": "string",
+              "identifier": "ac199132-dc0f-499c-850d-3f64012e5482"
+            },
+            {
+              "property": "sliding_scale",
+              "type": "string",
+              "identifier": "4ebca14f-3742-4e99-acb4-d14a1be28565"
+            },
+            {
+              "property": "lockout_interval",
+              "type": "string",
+              "identifier": "f720537c-0450-4383-90ae-94311222577e"
+            },
+            {
+              "property": "basal_rate",
+              "type": "float",
+              "identifier": "e6bfc5bb-80fb-4cfc-885b-884051864810"
+            },
+            {
+              "property": "one_hr_max",
+              "type": "string",
+              "identifier": "9bf729d9-c987-4099-86fc-b659366c15c3"
+            },
+            {
+              "property": "doses_per_24_hrs",
+              "type": "float",
+              "identifier": "8d1c240a-382c-438f-a2d4-a280c81a05c0"
+            },
+            {
+              "property": "duration",
+              "type": "float",
+              "identifier": "5d89ed39-1a52-46db-96cd-1ff3a8e247f4"
+            },
+            {
+              "property": "duration_interval",
+              "type": "string",
+              "identifier": "3d79f720-7c74-41c9-b517-ce119be74b16"
+            },
+            {
+              "property": "expiration_value",
+              "type": "integer",
+              "identifier": "58d96447-fe77-4924-af02-7e7b1c93b2d6"
+            },
+            {
+              "property": "expiration_unit",
+              "type": "string",
+              "identifier": "c7fe5edb-2ba3-41f4-b67b-9ca7839d2085"
+            },
+            {
+              "property": "expirationdate",
+              "type": "string",
+              "identifier": "560c5f30-aa8a-4c7f-b731-af5cc3586170"
+            },
+            {
+              "property": "dispensation",
+              "type": "string",
+              "identifier": "d7c7ea3e-a053-4aaa-a261-34c54f41b5ed"
+            },
+            {
+              "property": "fill_quantity",
+              "type": "string",
+              "identifier": "3e21178c-c6a8-42c6-bf97-9eaba2399072"
+            }
+          ],
+          "key": {
+            "properties": [
+              "6be3237b-7aae-4a70-8ac3-94a88cc2818b"
+            ],
+            "name": ""
+          }
+        },
+        "n10": {
+          "label": "Prescription",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "starttime",
+              "type": "string",
+              "identifier": "805c9271-f0c4-4672-b683-050e11aae323"
+            },
+            {
+              "property": "stoptime",
+              "type": "string",
+              "identifier": "20d6f5b6-ae62-4e71-a1d1-1a6bfcb9e60b"
+            },
+            {
+              "property": "drug_type",
+              "type": "string",
+              "identifier": "90e7c48a-3d98-4fe2-82be-c37e15b4979f"
+            },
+            {
+              "property": "drug",
+              "type": "string",
+              "identifier": "33d0aae9-8925-4ac8-bf8a-3578ec987e05"
+            },
+            {
+              "property": "gsn",
+              "type": "string",
+              "identifier": "102e5279-3398-4ba1-8f6d-4b2200623ac5"
+            },
+            {
+              "property": "ndc",
+              "type": "string",
+              "identifier": "cef4d2d6-195b-4fdf-970f-233b1df77bf0"
+            },
+            {
+              "property": "prod_strength",
+              "type": "string",
+              "identifier": "23f3292f-d455-45e2-82fc-00001c55832d"
+            },
+            {
+              "property": "form_rx",
+              "type": "string",
+              "identifier": "d45ee5d5-197c-4b55-95d4-2c3874180bcb"
+            },
+            {
+              "property": "dose_val_rx",
+              "type": "string",
+              "identifier": "3d1a3d1f-083b-4471-b1ef-c8f969aef7db"
+            },
+            {
+              "property": "dose_unit_rx",
+              "type": "string",
+              "identifier": "3308f71a-b1ca-4130-a12d-13f7311094df"
+            },
+            {
+              "property": "form_val_disp",
+              "type": "string",
+              "identifier": "27af9939-412d-4a86-a863-19e7c9b3b1a0"
+            },
+            {
+              "property": "form_unit_disp",
+              "type": "string",
+              "identifier": "72b049aa-8bdd-4125-8a38-f226139fc94c"
+            },
+            {
+              "property": "doses_per_24_hrs",
+              "type": "string",
+              "identifier": "58341aec-8626-45e5-a264-7acde88d922d"
+            },
+            {
+              "property": "route",
+              "type": "string",
+              "identifier": "c807aac0-a159-4ef9-b877-f6f42b9cdb21"
+            },
+            {
+              "property": "pharmacy_id",
+              "type": "string",
+              "identifier": "2766fb18-7f84-40bf-93ef-0b5b4f00d697"
+            }
+          ],
+          "key": {
+            "properties": [
+              "2766fb18-7f84-40bf-93ef-0b5b4f00d697"
+            ],
+            "name": ""
+          }
+        },
+        "n11": {
+          "label": "POE",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "poe_id",
+              "type": "string",
+              "identifier": "4f89c4a8-974b-4cac-ac36-c0ba7b0d3c37"
+            },
+            {
+              "property": "poe_seq",
+              "type": "integer",
+              "identifier": "99ed0494-bcbe-411f-b3eb-95809a0d4719"
+            },
+            {
+              "property": "ordertime",
+              "type": "string",
+              "identifier": "55489872-57e1-4d0b-b5c2-d50a9e831766"
+            },
+            {
+              "property": "order_type",
+              "type": "string",
+              "identifier": "3b58a921-d7c2-43c2-ba77-a1efddadaaf3"
+            },
+            {
+              "property": "order_subtype",
+              "type": "string",
+              "identifier": "6669a8bc-3844-49f9-bdd8-73110c0d8dcb"
+            },
+            {
+              "property": "transaction_type",
+              "type": "string",
+              "identifier": "16bbec91-8ff0-4402-ae7a-62ec8dfd46c4"
+            },
+            {
+              "property": "discontinue_of_poe_id",
+              "type": "string",
+              "identifier": "cda31a97-850a-43fd-8577-28fb69b5497b"
+            },
+            {
+              "property": "discontinued_by_poe_id",
+              "type": "string",
+              "identifier": "0a0d2238-c896-4937-921d-bea808cc5f37"
+            },
+            {
+              "property": "order_status",
+              "type": "string",
+              "identifier": "9c6eeee3-9693-44b0-85b0-d88ec78b4265"
+            }
+          ],
+          "key": {
+            "properties": [
+              "4f89c4a8-974b-4cac-ac36-c0ba7b0d3c37"
+            ],
+            "name": ""
+          }
+        },
+        "n13": {
+          "label": "Procedure",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "icd_code",
+              "type": "string",
+              "identifier": "9bcecae3-108c-45d9-9e59-3c426784dcb6"
+            },
+            {
+              "property": "icd_version",
+              "type": "integer",
+              "identifier": "f82496b3-0934-465b-8fa2-99c123baf564"
+            },
+            {
+              "property": "seq_num",
+              "type": "string",
+              "identifier": "df345120-a20b-4fce-9017-b6bb60df1d59"
+            },
+            {
+              "property": "chartdate",
+              "type": "string",
+              "identifier": "424ee7e3-daaa-4c21-8fe5-0e77a946fb3f"
+            }
+          ],
+          "key": {
+            "properties": [
+              "9bcecae3-108c-45d9-9e59-3c426784dcb6"
+            ],
+            "name": ""
+          }
+        },
+        "n14": {
+          "label": "d_ICD_Procedure",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "icd_code",
+              "type": "string",
+              "identifier": "71703c8e-f94e-477c-b69c-2b4e4cd2cc06"
+            },
+            {
+              "property": "icd_version",
+              "type": "integer",
+              "identifier": "bdfc0794-8e06-4f26-b8d7-ada08b68a477"
+            },
+            {
+              "property": "long_title",
+              "type": "string",
+              "identifier": "9bf84efa-793b-4994-8fa7-60aa37f541a7"
+            }
+          ],
+          "key": {
+            "properties": [
+              "71703c8e-f94e-477c-b69c-2b4e4cd2cc06"
+            ],
+            "name": ""
+          }
+        },
+        "n15": {
+          "label": "Microbiology",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "microevent_id",
+              "type": "integer",
+              "identifier": "af97c0a0-1c60-45ff-b2dc-31f26a569b98"
+            },
+            {
+              "property": "micro_specimen_id",
+              "type": "integer",
+              "identifier": "1b19f5db-4ec2-43ea-a2de-4130a3736a08"
+            },
+            {
+              "property": "chartdate",
+              "type": "string",
+              "identifier": "7bc8ff73-8da6-42cd-b23c-d6ea7c9af40b"
+            },
+            {
+              "property": "charttime",
+              "type": "string",
+              "identifier": "f4da5f46-c542-48d1-bcd8-8df752cfbe2e"
+            },
+            {
+              "property": "spec_itemid",
+              "type": "integer",
+              "identifier": "681de5fe-f476-4bce-be05-c89edb55de0a"
+            },
+            {
+              "property": "spec_type_desc",
+              "type": "string",
+              "identifier": "68ddd843-d4a4-4d6c-8586-8b7af3b41829"
+            },
+            {
+              "property": "test_seq",
+              "type": "integer",
+              "identifier": "4dba1ce6-7adb-43d7-b93c-dd58257c1623"
+            },
+            {
+              "property": "storedate",
+              "type": "string",
+              "identifier": "332e769d-0e05-40a8-b845-437360fddc68"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "4321bc37-6e27-40eb-8afe-c16f56e782b2"
+            },
+            {
+              "property": "test_itemid",
+              "type": "integer",
+              "identifier": "578f3cc4-0544-4e53-bd39-46e73ca749eb"
+            },
+            {
+              "property": "test_name",
+              "type": "string",
+              "identifier": "012189ad-6329-4756-8d8c-1d4c5b1cdac4"
+            },
+            {
+              "property": "org_itemid",
+              "type": "integer",
+              "identifier": "4c9628aa-4bf1-4be0-8cc6-702413cc91d6"
+            },
+            {
+              "property": "org_name",
+              "type": "string",
+              "identifier": "b4cbc6a6-9a43-4dd6-ae32-be37683cb0dc"
+            },
+            {
+              "property": "isolate_num",
+              "type": "integer",
+              "identifier": "87f124dc-5645-4da4-8237-feff63159842"
+            },
+            {
+              "property": "quantity",
+              "type": "string",
+              "identifier": "f58a5ca3-e607-4199-a25c-ade11516b14f"
+            },
+            {
+              "property": "ab_itemid",
+              "type": "integer",
+              "identifier": "88a7838b-a473-47b6-a8a1-481e75cb0588"
+            },
+            {
+              "property": "ab_name",
+              "type": "string",
+              "identifier": "20037bb0-f5f4-4262-8f6e-17ce1c1e1fe6"
+            },
+            {
+              "property": "dilution_text",
+              "type": "string",
+              "identifier": "ffdbc235-7158-4965-9d8a-d2ce487866d2"
+            },
+            {
+              "property": "dilution_comparison",
+              "type": "string",
+              "identifier": "d3163dc9-b5b7-470c-9bbc-ce8e7dcdd1b8"
+            },
+            {
+              "property": "dilution_value",
+              "type": "float",
+              "identifier": "bcef4a69-5058-4abf-a9b3-5959bb05477a"
+            },
+            {
+              "property": "interpretation",
+              "type": "string",
+              "identifier": "4169ca9c-817e-4a64-b953-2533a0592e55"
+            },
+            {
+              "property": "comments",
+              "type": "string",
+              "identifier": "941ddafb-5ede-4a12-8b67-a8d3ab8fbad6"
+            }
+          ],
+          "key": {
+            "properties": [
+              "af97c0a0-1c60-45ff-b2dc-31f26a569b98"
+            ],
+            "name": ""
+          }
+        },
+        "n16": {
+          "label": "POE_Detail",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "poe_id",
+              "type": "string",
+              "identifier": "73ebc590-721f-4305-8461-68f943a5e551"
+            },
+            {
+              "property": "poe_seq",
+              "type": "string",
+              "identifier": "4f5925c1-d663-46b7-8ebf-b2925d7ee208"
+            },
+            {
+              "property": "field_name",
+              "type": "string",
+              "identifier": "015a8237-330c-40c0-b4d3-99716c47ee41"
+            },
+            {
+              "property": "field_value",
+              "type": "string",
+              "identifier": "ad9999f0-a755-4fa0-b1da-2fec86da673d"
+            }
+          ],
+          "key": {
+            "properties": [
+              "73ebc590-721f-4305-8461-68f943a5e551"
+            ],
+            "name": ""
+          }
+        },
+        "n17": {
+          "label": "Service",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "transfertime",
+              "type": "string",
+              "identifier": "515af12b-59dd-4665-b759-fa508c4b117f"
+            },
+            {
+              "property": "prev_service",
+              "type": "string",
+              "identifier": "a2b21bde-b713-4ae9-8cc8-e02b121506c9"
+            },
+            {
+              "property": "curr_service",
+              "type": "string",
+              "identifier": "86623b64-dd3d-49c5-806d-0011ecdecd17"
+            }
+          ],
+          "key": {
+            "properties": [
+              "515af12b-59dd-4665-b759-fa508c4b117f"
+            ],
+            "name": ""
+          }
+        },
+        "n18": {
+          "label": "Chart Event",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "charttime",
+              "type": "string",
+              "identifier": "13012545-b943-4985-b8db-a290521ab3ec"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "7542d79c-e985-4458-8263-7478dd360f6c"
+            },
+            {
+              "property": "itemid",
+              "type": "integer",
+              "identifier": "c5ba62b6-59fb-4119-ab59-972ee7a4d47d"
+            },
+            {
+              "property": "value",
+              "type": "string",
+              "identifier": "b63a850f-0439-41a6-ac78-951b9f764ad1"
+            },
+            {
+              "property": "valuenum",
+              "type": "float",
+              "identifier": "85ff2f06-4517-489a-ab04-76e788d73f8e"
+            },
+            {
+              "property": "valueuom",
+              "type": "string",
+              "identifier": "eb8a9ca7-48f1-426e-894f-4140d379735f"
+            },
+            {
+              "property": "warning",
+              "type": "boolean",
+              "identifier": "7eab41c9-a15d-4086-835c-96ab9f4276ed"
+            }
+          ],
+          "key": {
+            "properties": [
+              "c5ba62b6-59fb-4119-ab59-972ee7a4d47d"
+            ],
+            "name": ""
+          }
+        },
+        "n19": {
+          "label": "ICU Stay",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "stay_id",
+              "type": "integer",
+              "identifier": "ad015cae-a230-42a0-940a-20a780007aff"
+            },
+            {
+              "property": "first_careunit",
+              "type": "integer",
+              "identifier": "111f5830-8c5b-488a-a905-e499f0dd5756"
+            },
+            {
+              "property": "last_careunit",
+              "type": "string",
+              "identifier": "89d959f8-7faf-44c6-b9b8-9a3015652f74"
+            },
+            {
+              "property": "intime",
+              "type": "string",
+              "identifier": "e93390e6-687e-48ad-b379-036896e41425"
+            },
+            {
+              "property": "outtime",
+              "type": "string",
+              "identifier": "dafccf0c-4bb4-4a9f-b6fb-cd7a817efcdd"
+            },
+            {
+              "property": "los",
+              "type": "float",
+              "identifier": "9c2582ca-b99f-4e9c-87cb-42e525d644aa"
+            }
+          ],
+          "key": {
+            "properties": [
+              "ad015cae-a230-42a0-940a-20a780007aff"
+            ],
+            "name": ""
+          }
+        },
+        "n20": {
+          "label": "Datetime Event",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "charttime",
+              "type": "string",
+              "identifier": "b212d19e-d4f1-4100-aade-f31abb2aab32"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "dfe791ac-b10f-4eaf-a93b-2897587a4782"
+            },
+            {
+              "property": "itemid",
+              "type": "integer",
+              "identifier": "2e42dc4a-3add-46fc-b1c0-d91030f78dcf"
+            },
+            {
+              "property": "value",
+              "type": "string",
+              "identifier": "10aa8270-2382-41d2-8e82-25c0fc934916"
+            },
+            {
+              "property": "valueuom",
+              "type": "string",
+              "identifier": "77052574-be79-4293-bf5d-2a0f9df96342"
+            },
+            {
+              "property": "warning",
+              "type": "boolean",
+              "identifier": "5f44948a-7043-46d7-858c-94c726af25da"
+            }
+          ],
+          "key": {
+            "properties": [
+              "2e42dc4a-3add-46fc-b1c0-d91030f78dcf"
+            ],
+            "name": ""
+          }
+        },
+        "n21": {
+          "label": "Input Event",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "starttime",
+              "type": "string",
+              "identifier": "a0d304d0-0d5b-4a7b-8ee7-6dd17e5d3255"
+            },
+            {
+              "property": "endtime",
+              "type": "string",
+              "identifier": "0f21f2c0-1b51-4344-bee0-5b632cc31002"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "e806ae52-ccbc-40e2-94d9-1eb4a865b01d"
+            },
+            {
+              "property": "itemid",
+              "type": "string",
+              "identifier": "07503cac-4f88-4938-bd6e-a68db6ff1b9d"
+            },
+            {
+              "property": "amount",
+              "type": "string",
+              "identifier": "5fdf76e3-a727-4ade-a372-09f9638c28f8"
+            },
+            {
+              "property": "amountuom",
+              "type": "string",
+              "identifier": "bad9b539-3101-4d82-8820-cd9004b562bb"
+            },
+            {
+              "property": "rate",
+              "type": "string",
+              "identifier": "39ae9116-90bf-46ba-82dc-2551f2312ee9"
+            },
+            {
+              "property": "rateuom",
+              "type": "string",
+              "identifier": "4cd270f7-f65c-466e-9535-41968fb32daa"
+            },
+            {
+              "property": "orderid",
+              "type": "string",
+              "identifier": "71ab0c9f-47a2-4d96-8489-a760545b8078"
+            },
+            {
+              "property": "linkorderid",
+              "type": "string",
+              "identifier": "0bcf6079-5749-44fc-bff6-50e5127a6029"
+            },
+            {
+              "property": "ordercategoryname",
+              "type": "string",
+              "identifier": "b7aa0e4c-faa3-482b-b453-5963afbdd63a"
+            },
+            {
+              "property": "secondaryordercategoryname",
+              "type": "string",
+              "identifier": "428e6589-5131-47b1-be65-5ffdf9a02b93"
+            },
+            {
+              "property": "ordercomponenttypedescription",
+              "type": "string",
+              "identifier": "902cf382-f2f7-4f03-9853-271b2789ecf8"
+            },
+            {
+              "property": "ordercategorydescription",
+              "type": "string",
+              "identifier": "67fec08f-9afb-439f-9e16-22b88323884e"
+            },
+            {
+              "property": "patientweight",
+              "type": "string",
+              "identifier": "1ecde7d3-87fc-423d-89ed-49eacb5d861e"
+            },
+            {
+              "property": "totalamount",
+              "type": "string",
+              "identifier": "625a8b23-3d6d-435c-9152-32336dc4bac9"
+            },
+            {
+              "property": "totalamountuom",
+              "type": "string",
+              "identifier": "2a8cb3b4-590a-4505-964d-67d1cf150180"
+            },
+            {
+              "property": "isopenbag",
+              "type": "string",
+              "identifier": "5483a948-7442-4b0d-a31b-2c7090d96fa1"
+            },
+            {
+              "property": "continueinnextdept",
+              "type": "string",
+              "identifier": "5b72f6e1-2274-4642-9a7d-f12f18fb3dd4"
+            },
+            {
+              "property": "cancelreason",
+              "type": "string",
+              "identifier": "083bce4f-bafd-4030-ada2-1f05d78a75d7"
+            },
+            {
+              "property": "statusdescription",
+              "type": "string",
+              "identifier": "2d31c2bf-6bc7-42f8-ab2c-37f7bc122e41"
+            },
+            {
+              "property": "originalamount",
+              "type": "string",
+              "identifier": "119299f4-e8ce-47ec-893b-f5ee481b1a0f"
+            },
+            {
+              "property": "originalrate",
+              "type": "string",
+              "identifier": "9507653c-e056-4e22-99ef-72d227f06037"
+            }
+          ],
+          "key": {
+            "properties": [
+              "07503cac-4f88-4938-bd6e-a68db6ff1b9d"
+            ],
+            "name": ""
+          }
+        },
+        "n22": {
+          "label": "Output Event",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "charttime",
+              "type": "string",
+              "identifier": "13179141-c9c1-473b-961a-86b680cc0b2e"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "bab25ce8-08fa-427b-a5d5-21b5934f2181"
+            },
+            {
+              "property": "itemid",
+              "type": "string",
+              "identifier": "bb445985-5817-4db9-8310-ae2e13de9417"
+            },
+            {
+              "property": "value",
+              "type": "string",
+              "identifier": "e81054a8-e063-46c1-8fde-575053c014b0"
+            },
+            {
+              "property": "valueuom",
+              "type": "string",
+              "identifier": "3a167ac0-167a-416f-9956-6dfb834d09da"
+            }
+          ],
+          "key": {
+            "properties": [
+              "bb445985-5817-4db9-8310-ae2e13de9417"
+            ],
+            "name": ""
+          }
+        },
+        "n23": {
+          "label": "Procedure Event",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "starttime",
+              "type": "string",
+              "identifier": "f208b687-e8fa-4c22-9841-e9f5186bf2f9"
+            },
+            {
+              "property": "endtime",
+              "type": "string",
+              "identifier": "eec0bc8e-ee97-4bba-ba27-5dccfe8a6952"
+            },
+            {
+              "property": "storetime",
+              "type": "string",
+              "identifier": "87111eef-e967-4efa-bca5-02b3469869a6"
+            },
+            {
+              "property": "itemid",
+              "type": "integer",
+              "identifier": "31cc9cb4-47c9-438a-b7e9-a306793a1290"
+            },
+            {
+              "property": "value",
+              "type": "string",
+              "identifier": "28193ae2-9510-40bd-b0d8-24949c4456cc"
+            },
+            {
+              "property": "valueuom",
+              "type": "string",
+              "identifier": "d7aa9bb2-7379-445b-a561-2e25a139706e"
+            },
+            {
+              "property": "location",
+              "type": "string",
+              "identifier": "aa46f72a-acd0-49a2-bf76-2e35071d0963"
+            },
+            {
+              "property": "locationcategory",
+              "type": "string",
+              "identifier": "adf6b1cc-8a11-4e13-a2ff-ca85c55a2f5d"
+            },
+            {
+              "property": "orderid",
+              "type": "integer",
+              "identifier": "a6679c30-4b57-42bf-ba60-679df47ef9e9"
+            },
+            {
+              "property": "linkorderid",
+              "type": "integer",
+              "identifier": "321ac22d-a855-4f2a-bcb7-2c5b3600d3ad"
+            },
+            {
+              "property": "ordercategoryname",
+              "type": "string",
+              "identifier": "7e10f3e9-1a8c-4d43-a9ec-4e3011be8859"
+            },
+            {
+              "property": "secondaryordercategoryname",
+              "type": "string",
+              "identifier": "427e561c-da63-4b94-9af5-6910dc32cc3d"
+            },
+            {
+              "property": "ordercategorydescription",
+              "type": "string",
+              "identifier": "eed94c57-9d71-4550-b2e8-c52f781c8bdf"
+            },
+            {
+              "property": "patientweight",
+              "type": "string",
+              "identifier": "fe4856c5-8d67-4605-a4d6-2ee4ba24eab5"
+            },
+            {
+              "property": "totalamount",
+              "type": "string",
+              "identifier": "eff87f57-f973-4493-b3db-a6bb22073c54"
+            },
+            {
+              "property": "totalamountuom",
+              "type": "string",
+              "identifier": "73e866f1-404e-428c-8b4f-ca1554318631"
+            },
+            {
+              "property": "isopenbag",
+              "type": "integer",
+              "identifier": "dbe08c31-6cdc-468f-adc3-fffa9e47e633"
+            },
+            {
+              "property": "continueinnextdept",
+              "type": "integer",
+              "identifier": "0d839245-667e-433b-be90-7c372d63bd14"
+            },
+            {
+              "property": "cancelreason",
+              "type": "integer",
+              "identifier": "51ce1f69-5e15-4c6e-a6e9-1ae8145db2ca"
+            },
+            {
+              "property": "statusdescription",
+              "type": "string",
+              "identifier": "472d13bd-acc3-4ba3-bf85-7db375607e71"
+            },
+            {
+              "property": "comments_date",
+              "type": "string",
+              "identifier": "3c73d9f4-c906-4462-9bfc-82edc4519382"
+            },
+            {
+              "property": "originalamount",
+              "type": "string",
+              "identifier": "3aa30be6-d1f8-4493-b5fc-e26c7ca2c463"
+            },
+            {
+              "property": "originalrate",
+              "type": "string",
+              "identifier": "b991e50c-894c-4da7-aee7-544d33e8134c"
+            }
+          ],
+          "key": {
+            "properties": [
+              "31cc9cb4-47c9-438a-b7e9-a306793a1290"
+            ],
+            "name": ""
+          }
+        },
+        "n24": {
+          "label": "d_ITEMS",
+          "additionLabels": [],
+          "labelProperties": [],
+          "properties": [
+            {
+              "property": "itemid",
+              "type": "string",
+              "identifier": "9509e5ee-8d26-45c8-906a-167ea494dbd7"
+            },
+            {
+              "property": "label",
+              "type": "string",
+              "identifier": "141e6e5d-8e02-484f-8750-9f587aa1de28"
+            },
+            {
+              "property": "abbreviation",
+              "type": "string",
+              "identifier": "fb80e81a-9760-46ba-9562-4180becfc189"
+            },
+            {
+              "property": "linksto",
+              "type": "string",
+              "identifier": "d5515a10-d5dd-4168-94e8-d27ce5b4ec24"
+            },
+            {
+              "property": "category",
+              "type": "string",
+              "identifier": "17c8b066-a40d-4dcb-a370-e0874ae04ccf"
+            },
+            {
+              "property": "unitname",
+              "type": "string",
+              "identifier": "c7b6c404-dfd9-4a18-a587-4fdb2efc1869"
+            },
+            {
+              "property": "param_type",
+              "type": "string",
+              "identifier": "0df758a9-13b5-486f-a0dd-fcea16e924cb"
+            },
+            {
+              "property": "lownormalvalue",
+              "type": "string",
+              "identifier": "d6817157-7bd8-4124-92dd-c1e09e9d0988"
+            },
+            {
+              "property": "highnormalvalue",
+              "type": "string",
+              "identifier": "8a49a8ad-30cb-4896-98cc-856355eaccbf"
+            }
+          ],
+          "key": {
+            "properties": [
+              "9509e5ee-8d26-45c8-906a-167ea494dbd7"
+            ],
+            "name": ""
+          }
+        }
+      },
+      "relationshipSchemas": {
+        "n0": {
+          "type": "HAS_ADMISSION",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n1",
+          "properties": []
+        },
+        "n1": {
+          "type": "HAS_TRANSFER",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n2",
+          "properties": []
+        },
+        "n2": {
+          "type": "HAS_DETAIL",
+          "sourceNodeSchema": "n6",
+          "targetNodeSchema": "n7",
+          "properties": []
+        },
+        "n3": {
+          "type": "HAS_DIAGNOSIS_INFO",
+          "sourceNodeSchema": "n3",
+          "targetNodeSchema": "n8",
+          "properties": []
+        },
+        "n4": {
+          "type": "HAS_MEDICINE",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n5",
+          "properties": []
+        },
+        "n5": {
+          "type": "HAS_PHARMACY_INFO",
+          "sourceNodeSchema": "n5",
+          "targetNodeSchema": "n9",
+          "properties": []
+        },
+        "n6": {
+          "type": "HAS_PRESCRIPTION",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n10",
+          "properties": []
+        },
+        "n7": {
+          "type": "HAS_PRESCRIPTION",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n10",
+          "properties": []
+        },
+        "n8": {
+          "type": "HAS_MEDICINE",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n5",
+          "properties": []
+        },
+        "n9": {
+          "type": "HAS_POE",
+          "sourceNodeSchema": "n5",
+          "targetNodeSchema": "n11",
+          "properties": []
+        },
+        "n10": {
+          "type": "HAS_LAB_EVENT",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n6",
+          "properties": []
+        },
+        "n11": {
+          "type": "HAS_LAB_EVENT",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n6",
+          "properties": []
+        },
+        "n12": {
+          "type": "HAS_DRG_CODE",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n4",
+          "properties": []
+        },
+        "n13": {
+          "type": "HAS_DRG_CODE",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n4",
+          "properties": []
+        },
+        "n14": {
+          "type": "HAS_DIAGNOSIS",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n3",
+          "properties": []
+        },
+        "n15": {
+          "type": "HAS_DIAGNOSIS",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n3",
+          "properties": []
+        },
+        "n16": {
+          "type": "HAS_PHARMACY_INFO",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n9",
+          "properties": []
+        },
+        "n17": {
+          "type": "HAS_PHARMACY_INFO",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n9",
+          "properties": []
+        },
+        "n18": {
+          "type": "HAS_PHARMACY_INFO",
+          "sourceNodeSchema": "n11",
+          "targetNodeSchema": "n9",
+          "properties": []
+        },
+        "n19": {
+          "type": "HAS_POE",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n11",
+          "properties": []
+        },
+        "n20": {
+          "type": "HAS_POE",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n11",
+          "properties": []
+        },
+        "n21": {
+          "type": "HAS_PROCEDURE_INFO",
+          "sourceNodeSchema": "n13",
+          "targetNodeSchema": "n14",
+          "properties": []
+        },
+        "n22": {
+          "type": "HAS_PROCEDURE",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n13",
+          "properties": []
+        },
+        "n23": {
+          "type": "HAS_PROCEDURE",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n13",
+          "properties": []
+        },
+        "n24": {
+          "type": "HAS_TRANSFER",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n2",
+          "properties": []
+        },
+        "n25": {
+          "type": "HAS_MICROBIOLOGY",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n15",
+          "properties": []
+        },
+        "n26": {
+          "type": "HAS_MICROBIOLOGY",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n15",
+          "properties": []
+        },
+        "n27": {
+          "type": "HAS_POE_DETAIL",
+          "sourceNodeSchema": "n11",
+          "targetNodeSchema": "n16",
+          "properties": []
+        },
+        "n28": {
+          "type": "HAS_POE_DETAIL",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n16",
+          "properties": []
+        },
+        "n29": {
+          "type": "UNDER_CARE_OF",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n17",
+          "properties": []
+        },
+        "n30": {
+          "type": "UNDER_CARE_OF",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n17",
+          "properties": []
+        },
+        "n31": {
+          "type": "HAS_ICU_STAY",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n19",
+          "properties": []
+        },
+        "n32": {
+          "type": "HAS_ICU_STAY",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n19",
+          "properties": []
+        },
+        "n33": {
+          "type": "HAS_INPUT_EVENT",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n21",
+          "properties": []
+        },
+        "n34": {
+          "type": "HAS_INPUT_EVENT",
+          "sourceNodeSchema": "n19",
+          "targetNodeSchema": "n21",
+          "properties": []
+        },
+        "n35": {
+          "type": "HAS_INPUT_EVENT",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n21",
+          "properties": []
+        },
+        "n36": {
+          "type": "HAS_PROCEDURE_EVENT",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n23",
+          "properties": []
+        },
+        "n37": {
+          "type": "HAS_PROCEDURE_EVENT",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n23",
+          "properties": []
+        },
+        "n38": {
+          "type": "HAS_PROCEDURE_EVENT",
+          "sourceNodeSchema": "n19",
+          "targetNodeSchema": "n23",
+          "properties": []
+        },
+        "n39": {
+          "type": "HAS_OUTPUT_EVENT",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n22",
+          "properties": []
+        },
+        "n40": {
+          "type": "HAS_OUTPUT_EVENT",
+          "sourceNodeSchema": "n19",
+          "targetNodeSchema": "n22",
+          "properties": []
+        },
+        "n41": {
+          "type": "HAS_OUTPUT_EVENT",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n22",
+          "properties": []
+        },
+        "n42": {
+          "type": "HAS_DATETIME_EVENT",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n20",
+          "properties": []
+        },
+        "n43": {
+          "type": "HAS_DATETIME_EVENT",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n20",
+          "properties": []
+        },
+        "n44": {
+          "type": "HAS_DATETIME_EVENT",
+          "sourceNodeSchema": "n19",
+          "targetNodeSchema": "n20",
+          "properties": []
+        },
+        "n45": {
+          "type": "HAS_CHART_EVENT",
+          "sourceNodeSchema": "n1",
+          "targetNodeSchema": "n18",
+          "properties": []
+        },
+        "n46": {
+          "type": "HAS_CHART_EVENT",
+          "sourceNodeSchema": "n0",
+          "targetNodeSchema": "n18",
+          "properties": []
+        },
+        "n47": {
+          "type": "HAS_CHART_EVENT",
+          "sourceNodeSchema": "n19",
+          "targetNodeSchema": "n18",
+          "properties": []
+        },
+        "n48": {
+          "type": "HAS_ITEM",
+          "sourceNodeSchema": "n18",
+          "targetNodeSchema": "n24",
+          "properties": []
+        },
+        "n49": {
+          "type": "HAS_ITEM",
+          "sourceNodeSchema": "n20",
+          "targetNodeSchema": "n24",
+          "properties": []
+        },
+        "n50": {
+          "type": "HAS_ITEM",
+          "sourceNodeSchema": "n22",
+          "targetNodeSchema": "n24",
+          "properties": []
+        },
+        "n51": {
+          "type": "HAS_ITEM",
+          "sourceNodeSchema": "n23",
+          "targetNodeSchema": "n24",
+          "properties": []
+        },
+        "n52": {
+          "type": "HAS_ITEM",
+          "sourceNodeSchema": "n21",
+          "targetNodeSchema": "n24",
+          "properties": []
+        }
+      }
+    },
+    "mappingModel": {
+      "nodeMappings": {
+        "n0": {
+          "nodeSchema": "n0",
+          "fileSchema": "postgres_subset_core_patients.csv",
+          "mappings": [
+            {
+              "field": "subject_id"
+            },
+            {
+              "field": "gender"
+            },
+            {
+              "field": "anchor_age"
+            },
+            {
+              "field": "anchor_year"
+            },
+            {
+              "field": "anchor_year_group"
+            },
+            {
+              "field": "dod"
+            }
+          ]
+        },
+        "n1": {
+          "nodeSchema": "n1",
+          "fileSchema": "postgres_subset_core_admissions.csv",
+          "mappings": [
+            {
+              "field": "hadm_id"
+            },
+            {
+              "field": "admittime"
+            },
+            {
+              "field": "dischtime"
+            },
+            {
+              "field": "deathtime"
+            },
+            {
+              "field": "admission_type"
+            },
+            {
+              "field": "admission_location"
+            },
+            {
+              "field": "discharge_location"
+            },
+            {
+              "field": "insurance"
+            },
+            {
+              "field": "language"
+            },
+            {
+              "field": "marital_status"
+            },
+            {
+              "field": "ethnicity"
+            },
+            {
+              "field": "edregtime"
+            },
+            {
+              "field": "edouttime"
+            },
+            {
+              "field": "hospital_expire_flag"
+            }
+          ]
+        },
+        "n2": {
+          "nodeSchema": "n2",
+          "fileSchema": "postgres_subset_core_transfers.csv",
+          "mappings": [
+            {
+              "field": "transfer_id"
+            },
+            {
+              "field": "eventtype"
+            },
+            {
+              "field": "careunit"
+            },
+            {
+              "field": "intime"
+            },
+            {
+              "field": "outtime"
+            }
+          ]
+        },
+        "n3": {
+          "nodeSchema": "n3",
+          "fileSchema": "postgres_subset_hosp_diagnoses_icd.csv",
+          "mappings": [
+            {
+              "field": "seq_num"
+            },
+            {
+              "field": "icd_code"
+            },
+            {
+              "field": "icd_version"
+            }
+          ]
+        },
+        "n4": {
+          "nodeSchema": "n4",
+          "fileSchema": "postgres_subset_hosp_drgcodes.csv",
+          "mappings": [
+            {
+              "field": "drg_type"
+            },
+            {
+              "field": "drg_code"
+            },
+            {
+              "field": "description"
+            },
+            {
+              "field": "drg_severity"
+            },
+            {
+              "field": "drg_mortality"
+            }
+          ]
+        },
+        "n5": {
+          "nodeSchema": "n5",
+          "fileSchema": "postgres_subset_hosp_emar.csv",
+          "mappings": [
+            {
+              "field": "emar_id"
+            },
+            {
+              "field": "emar_seq"
+            },
+            {
+              "field": "charttime"
+            },
+            {
+              "field": "medication"
+            },
+            {
+              "field": "event_txt"
+            },
+            {
+              "field": "scheduletime"
+            },
+            {
+              "field": "storetime"
+            }
+          ]
+        },
+        "n6": {
+          "nodeSchema": "n6",
+          "fileSchema": "postgres_subset_hosp_labevents.csv",
+          "mappings": [
+            {
+              "field": "labevent_id"
+            },
+            {
+              "field": "specimen_id"
+            },
+            {
+              "field": "charttime"
+            },
+            {
+              "field": "storetime"
+            },
+            {
+              "field": "value"
+            },
+            {
+              "field": "valuenum"
+            },
+            {
+              "field": "valueuom"
+            },
+            {
+              "field": "ref_range_lower"
+            },
+            {
+              "field": "ref_range_upper"
+            },
+            {
+              "field": "flag"
+            },
+            {
+              "field": "priority"
+            },
+            {
+              "field": "comments"
+            }
+          ]
+        },
+        "n7": {
+          "nodeSchema": "n7",
+          "fileSchema": "postgres_subset_hosp_d_labitems.csv",
+          "mappings": [
+            {
+              "field": "itemid"
+            },
+            {
+              "field": "label"
+            },
+            {
+              "field": "fluid"
+            },
+            {
+              "field": "category"
+            },
+            {
+              "field": "loinc_code"
+            }
+          ]
+        },
+        "n8": {
+          "nodeSchema": "n8",
+          "fileSchema": "postgres_subset_hosp_d_icd_diagnoses.csv",
+          "mappings": [
+            {
+              "field": "icd_code"
+            },
+            {
+              "field": "icd_version"
+            },
+            {
+              "field": "long_title"
+            }
+          ]
+        },
+        "n9": {
+          "nodeSchema": "n9",
+          "fileSchema": "postgres_subset_hosp_pharmacy.csv",
+          "mappings": [
+            {
+              "field": "pharmacy_id"
+            },
+            {
+              "field": "starttime"
+            },
+            {
+              "field": "stoptime"
+            },
+            {
+              "field": "medication"
+            },
+            {
+              "field": "proc_type"
+            },
+            {
+              "field": "status"
+            },
+            {
+              "field": "entertime"
+            },
+            {
+              "field": "verifiedtime"
+            },
+            {
+              "field": "route"
+            },
+            {
+              "field": "frequency"
+            },
+            {
+              "field": "disp_sched"
+            },
+            {
+              "field": "infusion_type"
+            },
+            {
+              "field": "sliding_scale"
+            },
+            {
+              "field": "lockout_interval"
+            },
+            {
+              "field": "basal_rate"
+            },
+            {
+              "field": "one_hr_max"
+            },
+            {
+              "field": "doses_per_24_hrs"
+            },
+            {
+              "field": "duration"
+            },
+            {
+              "field": "duration_interval"
+            },
+            {
+              "field": "expiration_value"
+            },
+            {
+              "field": "expiration_unit"
+            },
+            {
+              "field": "expirationdate"
+            },
+            {
+              "field": "dispensation"
+            },
+            {
+              "field": "fill_quantity"
+            }
+          ]
+        },
+        "n10": {
+          "nodeSchema": "n10",
+          "fileSchema": "postgres_subset_hosp_prescriptions.csv",
+          "mappings": [
+            {
+              "field": "starttime"
+            },
+            {
+              "field": "stoptime"
+            },
+            {
+              "field": "drug_type"
+            },
+            {
+              "field": "drug"
+            },
+            {
+              "field": "gsn"
+            },
+            {
+              "field": "ndc"
+            },
+            {
+              "field": "prod_strength"
+            },
+            {
+              "field": "form_rx"
+            },
+            {
+              "field": "dose_val_rx"
+            },
+            {
+              "field": "dose_unit_rx"
+            },
+            {
+              "field": "form_val_disp"
+            },
+            {
+              "field": "form_unit_disp"
+            },
+            {
+              "field": "doses_per_24_hrs"
+            },
+            {
+              "field": "route"
+            },
+            {
+              "field": "pharmacy_id"
+            }
+          ]
+        },
+        "n11": {
+          "nodeSchema": "n11",
+          "fileSchema": "postgres_subset_hosp_poe.csv",
+          "mappings": [
+            {
+              "field": "poe_id"
+            },
+            {
+              "field": "poe_seq"
+            },
+            {
+              "field": "ordertime"
+            },
+            {
+              "field": "order_type"
+            },
+            {
+              "field": "order_subtype"
+            },
+            {
+              "field": "transaction_type"
+            },
+            {
+              "field": "discontinue_of_poe_id"
+            },
+            {
+              "field": "discontinued_by_poe_id"
+            },
+            {
+              "field": "order_status"
+            }
+          ]
+        },
+        "n13": {
+          "nodeSchema": "n13",
+          "fileSchema": "postgres_subset_hosp_procedures_icd.csv",
+          "mappings": [
+            {
+              "field": "icd_code"
+            },
+            {
+              "field": "icd_version"
+            },
+            {
+              "field": "seq_num"
+            },
+            {
+              "field": "chartdate"
+            }
+          ]
+        },
+        "n14": {
+          "nodeSchema": "n14",
+          "fileSchema": "postgres_subset_hosp_d_icd_procedures.csv",
+          "mappings": [
+            {
+              "field": "icd_code"
+            },
+            {
+              "field": "icd_version"
+            },
+            {
+              "field": "long_title"
+            }
+          ]
+        },
+        "n15": {
+          "nodeSchema": "n15",
+          "fileSchema": "postgres_subset_hosp_microbiologyevents.csv",
+          "mappings": [
+            {
+              "field": "microevent_id"
+            },
+            {
+              "field": "micro_specimen_id"
+            },
+            {
+              "field": "chartdate"
+            },
+            {
+              "field": "charttime"
+            },
+            {
+              "field": "spec_itemid"
+            },
+            {
+              "field": "spec_type_desc"
+            },
+            {
+              "field": "test_seq"
+            },
+            {
+              "field": "storedate"
+            },
+            {
+              "field": "storetime"
+            },
+            {
+              "field": "test_itemid"
+            },
+            {
+              "field": "test_name"
+            },
+            {
+              "field": "org_itemid"
+            },
+            {
+              "field": "org_name"
+            },
+            {
+              "field": "isolate_num"
+            },
+            {
+              "field": "quantity"
+            },
+            {
+              "field": "ab_itemid"
+            },
+            {
+              "field": "ab_name"
+            },
+            {
+              "field": "dilution_text"
+            },
+            {
+              "field": "dilution_comparison"
+            },
+            {
+              "field": "dilution_value"
+            },
+            {
+              "field": "interpretation"
+            },
+            {
+              "field": "comments"
+            }
+          ]
+        },
+        "n16": {
+          "nodeSchema": "n16",
+          "fileSchema": "postgres_subset_hosp_poe_detail.csv",
+          "mappings": [
+            {
+              "field": "poe_id"
+            },
+            {
+              "field": "poe_seq"
+            },
+            {
+              "field": "field_name"
+            },
+            {
+              "field": "field_value"
+            }
+          ]
+        },
+        "n17": {
+          "nodeSchema": "n17",
+          "fileSchema": "postgres_subset_hosp_services.csv",
+          "mappings": [
+            {
+              "field": "transfertime"
+            },
+            {
+              "field": "prev_service"
+            },
+            {
+              "field": "curr_service"
+            }
+          ]
+        },
+        "n18": {
+          "nodeSchema": "n18",
+          "fileSchema": "postgres_subset_icu_chartevents.csv",
+          "mappings": [
+            {
+              "field": "charttime"
+            },
+            {
+              "field": "storetime"
+            },
+            {
+              "field": "itemid"
+            },
+            {
+              "field": "value"
+            },
+            {
+              "field": "valuenum"
+            },
+            {
+              "field": "valueuom"
+            },
+            {
+              "field": "warning"
+            }
+          ]
+        },
+        "n19": {
+          "nodeSchema": "n19",
+          "fileSchema": "postgres_subset_icu_icu_stays.csv",
+          "mappings": [
+            {
+              "field": "stay_id"
+            },
+            {
+              "field": "first_careunit"
+            },
+            {
+              "field": "last_careunit"
+            },
+            {
+              "field": "intime"
+            },
+            {
+              "field": "outtime"
+            },
+            {
+              "field": "los"
+            }
+          ]
+        },
+        "n20": {
+          "nodeSchema": "n20",
+          "fileSchema": "postgres_subset_icu_datetimeevents.csv",
+          "mappings": [
+            {
+              "field": "charttime"
+            },
+            {
+              "field": "storetime"
+            },
+            {
+              "field": "itemid"
+            },
+            {
+              "field": "value"
+            },
+            {
+              "field": "valueuom"
+            },
+            {
+              "field": "warning"
+            }
+          ]
+        },
+        "n21": {
+          "nodeSchema": "n21",
+          "fileSchema": "postgres_subset_icu_inputevents.csv",
+          "mappings": [
+            {
+              "field": "starttime"
+            },
+            {
+              "field": "endtime"
+            },
+            {
+              "field": "storetime"
+            },
+            {
+              "field": "itemid"
+            },
+            {
+              "field": "amount"
+            },
+            {
+              "field": "amountuom"
+            },
+            {
+              "field": "rate"
+            },
+            {
+              "field": "rateuom"
+            },
+            {
+              "field": "orderid"
+            },
+            {
+              "field": "linkorderid"
+            },
+            {
+              "field": "ordercategoryname"
+            },
+            {
+              "field": "secondaryordercategoryname"
+            },
+            {
+              "field": "ordercomponenttypedescription"
+            },
+            {
+              "field": "ordercategorydescription"
+            },
+            {
+              "field": "patientweight"
+            },
+            {
+              "field": "totalamount"
+            },
+            {
+              "field": "totalamountuom"
+            },
+            {
+              "field": "isopenbag"
+            },
+            {
+              "field": "continueinnextdept"
+            },
+            {
+              "field": "cancelreason"
+            },
+            {
+              "field": "statusdescription"
+            },
+            {
+              "field": "originalamount"
+            },
+            {
+              "field": "originalrate"
+            }
+          ]
+        },
+        "n22": {
+          "nodeSchema": "n22",
+          "fileSchema": "postgres_subset_icu_outputevents.csv",
+          "mappings": [
+            {
+              "field": "charttime"
+            },
+            {
+              "field": "storetime"
+            },
+            {
+              "field": "itemid"
+            },
+            {
+              "field": "value"
+            },
+            {
+              "field": "valueuom"
+            }
+          ]
+        },
+        "n23": {
+          "nodeSchema": "n23",
+          "fileSchema": "postgres_subset_icu_procedureevents.csv",
+          "mappings": [
+            {
+              "field": "starttime"
+            },
+            {
+              "field": "endtime"
+            },
+            {
+              "field": "storetime"
+            },
+            {
+              "field": "itemid"
+            },
+            {
+              "field": "value"
+            },
+            {
+              "field": "valueuom"
+            },
+            {
+              "field": "location"
+            },
+            {
+              "field": "locationcategory"
+            },
+            {
+              "field": "orderid"
+            },
+            {
+              "field": "linkorderid"
+            },
+            {
+              "field": "ordercategoryname"
+            },
+            {
+              "field": "secondaryordercategoryname"
+            },
+            {
+              "field": "ordercategorydescription"
+            },
+            {
+              "field": "patientweight"
+            },
+            {
+              "field": "totalamount"
+            },
+            {
+              "field": "totalamountuom"
+            },
+            {
+              "field": "isopenbag"
+            },
+            {
+              "field": "continueinnextdept"
+            },
+            {
+              "field": "cancelreason"
+            },
+            {
+              "field": "statusdescription"
+            },
+            {
+              "field": "comments_date"
+            },
+            {
+              "field": "originalamount"
+            },
+            {
+              "field": "originalrate"
+            }
+          ]
+        },
+        "n24": {
+          "nodeSchema": "n24",
+          "fileSchema": "postgres_subset_icu_d_items.csv",
+          "mappings": [
+            {
+              "field": "itemid"
+            },
+            {
+              "field": "label"
+            },
+            {
+              "field": "abbreviation"
+            },
+            {
+              "field": "linksto"
+            },
+            {
+              "field": "category"
+            },
+            {
+              "field": "unitname"
+            },
+            {
+              "field": "param_type"
+            },
+            {
+              "field": "lownormalvalue"
+            },
+            {
+              "field": "highnormalvalue"
+            }
+          ]
+        }
+      },
+      "relationshipMappings": {
+        "n0": {
+          "relationshipSchema": "n0",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_core_admissions.csv"
+        },
+        "n1": {
+          "relationshipSchema": "n1",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_core_transfers.csv"
+        },
+        "n2": {
+          "relationshipSchema": "n2",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_labevents.csv"
+        },
+        "n3": {
+          "relationshipSchema": "n3",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "icd_code"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "icd_code"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_d_icd_diagnoses.csv"
+        },
+        "n4": {
+          "relationshipSchema": "n4",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_emar.csv"
+        },
+        "n5": {
+          "relationshipSchema": "n5",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "pharmacy_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "pharmacy_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_emar.csv"
+        },
+        "n6": {
+          "relationshipSchema": "n6",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_prescriptions.csv"
+        },
+        "n7": {
+          "relationshipSchema": "n7",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_prescriptions.csv"
+        },
+        "n8": {
+          "relationshipSchema": "n8",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_emar.csv"
+        },
+        "n9": {
+          "relationshipSchema": "n9",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "poe_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "poe_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_emar.csv"
+        },
+        "n10": {
+          "relationshipSchema": "n10",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_labevents.csv"
+        },
+        "n11": {
+          "relationshipSchema": "n11",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_labevents.csv"
+        },
+        "n12": {
+          "relationshipSchema": "n12",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_drgcodes.csv"
+        },
+        "n13": {
+          "relationshipSchema": "n13",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_drgcodes.csv"
+        },
+        "n14": {
+          "relationshipSchema": "n14",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_diagnoses_icd.csv"
+        },
+        "n15": {
+          "relationshipSchema": "n15",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_diagnoses_icd.csv"
+        },
+        "n16": {
+          "relationshipSchema": "n16",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_pharmacy.csv"
+        },
+        "n17": {
+          "relationshipSchema": "n17",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_pharmacy.csv"
+        },
+        "n18": {
+          "relationshipSchema": "n18",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "poe_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "poe_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_pharmacy.csv"
+        },
+        "n19": {
+          "relationshipSchema": "n19",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_poe.csv"
+        },
+        "n20": {
+          "relationshipSchema": "n20",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_poe.csv"
+        },
+        "n21": {
+          "relationshipSchema": "n21",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "icd_code"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "icd_code"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_d_icd_procedures.csv"
+        },
+        "n22": {
+          "relationshipSchema": "n22",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_procedures_icd.csv"
+        },
+        "n23": {
+          "relationshipSchema": "n23",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_procedures_icd.csv"
+        },
+        "n24": {
+          "relationshipSchema": "n24",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_core_transfers.csv"
+        },
+        "n25": {
+          "relationshipSchema": "n25",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_microbiologyevents.csv"
+        },
+        "n26": {
+          "relationshipSchema": "n26",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_microbiologyevents.csv"
+        },
+        "n27": {
+          "relationshipSchema": "n27",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "poe_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "poe_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_poe.csv"
+        },
+        "n28": {
+          "relationshipSchema": "n28",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_poe_detail.csv"
+        },
+        "n29": {
+          "relationshipSchema": "n29",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_services.csv"
+        },
+        "n30": {
+          "relationshipSchema": "n30",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_hosp_services.csv"
+        },
+        "n31": {
+          "relationshipSchema": "n31",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_icu_stays.csv"
+        },
+        "n32": {
+          "relationshipSchema": "n32",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_icu_stays.csv"
+        },
+        "n33": {
+          "relationshipSchema": "n33",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_inputevents.csv"
+        },
+        "n34": {
+          "relationshipSchema": "n34",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_inputevents.csv"
+        },
+        "n35": {
+          "relationshipSchema": "n35",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_inputevents.csv"
+        },
+        "n36": {
+          "relationshipSchema": "n36",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_procedureevents.csv"
+        },
+        "n37": {
+          "relationshipSchema": "n37",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_procedureevents.csv"
+        },
+        "n38": {
+          "relationshipSchema": "n38",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_procedureevents.csv"
+        },
+        "n39": {
+          "relationshipSchema": "n39",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_outputevents.csv"
+        },
+        "n40": {
+          "relationshipSchema": "n40",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_outputevents.csv"
+        },
+        "n41": {
+          "relationshipSchema": "n41",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_outputevents.csv"
+        },
+        "n42": {
+          "relationshipSchema": "n42",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_datetimeevents.csv"
+        },
+        "n43": {
+          "relationshipSchema": "n43",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_datetimeevents.csv"
+        },
+        "n44": {
+          "relationshipSchema": "n44",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_datetimeevents.csv"
+        },
+        "n45": {
+          "relationshipSchema": "n45",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "hadm_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_chartevents.csv"
+        },
+        "n46": {
+          "relationshipSchema": "n46",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "subject_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_chartevents.csv"
+        },
+        "n47": {
+          "relationshipSchema": "n47",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "stay_id"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_chartevents.csv"
+        },
+        "n48": {
+          "relationshipSchema": "n48",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_chartevents.csv"
+        },
+        "n49": {
+          "relationshipSchema": "n49",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_datetimeevents.csv"
+        },
+        "n50": {
+          "relationshipSchema": "n50",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_outputevents.csv"
+        },
+        "n51": {
+          "relationshipSchema": "n51",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_procedureevents.csv"
+        },
+        "n52": {
+          "relationshipSchema": "n52",
+          "mappings": [],
+          "sourceMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "targetMappings": [
+            {
+              "field": "itemid"
+            }
+          ],
+          "fileSchema": "postgres_subset_icu_inputevents.csv"
+        }
+      }
+    }
+  }
+}
